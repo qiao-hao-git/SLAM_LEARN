@@ -1,0 +1,115 @@
+Determining if the function sgemm_ exists failed with the following output:
+Change Dir: /home/rc_qh/下载/slam/gaussNewton/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make -f Makefile cmTC_06ab2/fast && /usr/bin/make  -f CMakeFiles/cmTC_06ab2.dir/build.make CMakeFiles/cmTC_06ab2.dir/build
+make[1]: 进入目录“/home/rc_qh/下载/slam/gaussNewton/build/CMakeFiles/CMakeTmp”
+Building C object CMakeFiles/cmTC_06ab2.dir/CheckFunctionExists.c.o
+/usr/bin/cc   -DCHECK_FUNCTION_EXISTS=sgemm_ -o CMakeFiles/cmTC_06ab2.dir/CheckFunctionExists.c.o -c /usr/share/cmake-3.22/Modules/CheckFunctionExists.c
+Linking C executable cmTC_06ab2
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_06ab2.dir/link.txt --verbose=1
+/usr/bin/cc  -DCHECK_FUNCTION_EXISTS=sgemm_ CMakeFiles/cmTC_06ab2.dir/CheckFunctionExists.c.o -o cmTC_06ab2 
+/usr/bin/ld: CMakeFiles/cmTC_06ab2.dir/CheckFunctionExists.c.o: in function `main':
+CheckFunctionExists.c:(.text+0x14): undefined reference to `sgemm_'
+collect2: error: ld returned 1 exit status
+make[1]: *** [CMakeFiles/cmTC_06ab2.dir/build.make:99：cmTC_06ab2] 错误 1
+make[1]: 离开目录“/home/rc_qh/下载/slam/gaussNewton/build/CMakeFiles/CMakeTmp”
+make: *** [Makefile:127：cmTC_06ab2/fast] 错误 2
+
+
+
+Performing C SOURCE FILE Test CMAKE_HAVE_LIBC_PTHREAD failed with the following output:
+Change Dir: /home/rc_qh/下载/slam/gaussNewton/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make -f Makefile cmTC_bf369/fast && /usr/bin/make  -f CMakeFiles/cmTC_bf369.dir/build.make CMakeFiles/cmTC_bf369.dir/build
+make[1]: 进入目录“/home/rc_qh/下载/slam/gaussNewton/build/CMakeFiles/CMakeTmp”
+Building C object CMakeFiles/cmTC_bf369.dir/src.c.o
+/usr/bin/cc -DCMAKE_HAVE_LIBC_PTHREAD   -o CMakeFiles/cmTC_bf369.dir/src.c.o -c /home/rc_qh/下载/slam/gaussNewton/build/CMakeFiles/CMakeTmp/src.c
+Linking C executable cmTC_bf369
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_bf369.dir/link.txt --verbose=1
+/usr/bin/cc CMakeFiles/cmTC_bf369.dir/src.c.o -o cmTC_bf369 
+/usr/bin/ld: CMakeFiles/cmTC_bf369.dir/src.c.o: in function `main':
+src.c:(.text+0x46): undefined reference to `pthread_create'
+/usr/bin/ld: src.c:(.text+0x52): undefined reference to `pthread_detach'
+/usr/bin/ld: src.c:(.text+0x5e): undefined reference to `pthread_cancel'
+/usr/bin/ld: src.c:(.text+0x6f): undefined reference to `pthread_join'
+collect2: error: ld returned 1 exit status
+make[1]: *** [CMakeFiles/cmTC_bf369.dir/build.make:99：cmTC_bf369] 错误 1
+make[1]: 离开目录“/home/rc_qh/下载/slam/gaussNewton/build/CMakeFiles/CMakeTmp”
+make: *** [Makefile:127：cmTC_bf369/fast] 错误 2
+
+
+Source file was:
+#include <pthread.h>
+
+static void* test_func(void* data)
+{
+  return data;
+}
+
+int main(void)
+{
+  pthread_t thread;
+  pthread_create(&thread, NULL, test_func, NULL);
+  pthread_detach(thread);
+  pthread_cancel(thread);
+  pthread_join(thread, NULL);
+  pthread_atfork(NULL, NULL, NULL);
+  pthread_exit(NULL);
+
+  return 0;
+}
+
+Determining if the function pthread_create exists in the pthreads failed with the following output:
+Change Dir: /home/rc_qh/下载/slam/gaussNewton/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make -f Makefile cmTC_a467c/fast && /usr/bin/make  -f CMakeFiles/cmTC_a467c.dir/build.make CMakeFiles/cmTC_a467c.dir/build
+make[1]: 进入目录“/home/rc_qh/下载/slam/gaussNewton/build/CMakeFiles/CMakeTmp”
+Building C object CMakeFiles/cmTC_a467c.dir/CheckFunctionExists.c.o
+/usr/bin/cc   -DCHECK_FUNCTION_EXISTS=pthread_create -o CMakeFiles/cmTC_a467c.dir/CheckFunctionExists.c.o -c /usr/share/cmake-3.22/Modules/CheckFunctionExists.c
+Linking C executable cmTC_a467c
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_a467c.dir/link.txt --verbose=1
+/usr/bin/cc  -DCHECK_FUNCTION_EXISTS=pthread_create CMakeFiles/cmTC_a467c.dir/CheckFunctionExists.c.o -o cmTC_a467c  -lpthreads 
+/usr/bin/ld: 找不到 -lpthreads
+collect2: error: ld returned 1 exit status
+make[1]: *** [CMakeFiles/cmTC_a467c.dir/build.make:99：cmTC_a467c] 错误 1
+make[1]: 离开目录“/home/rc_qh/下载/slam/gaussNewton/build/CMakeFiles/CMakeTmp”
+make: *** [Makefile:127：cmTC_a467c/fast] 错误 2
+
+
+
+Determining if the function cheev_ exists failed with the following output:
+Change Dir: /home/rc_qh/下载/slam/gaussNewton/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make -f Makefile cmTC_34982/fast && /usr/bin/make  -f CMakeFiles/cmTC_34982.dir/build.make CMakeFiles/cmTC_34982.dir/build
+make[1]: 进入目录“/home/rc_qh/下载/slam/gaussNewton/build/CMakeFiles/CMakeTmp”
+Building C object CMakeFiles/cmTC_34982.dir/CheckFunctionExists.c.o
+/usr/bin/cc   -DCHECK_FUNCTION_EXISTS=cheev_ -o CMakeFiles/cmTC_34982.dir/CheckFunctionExists.c.o -c /usr/share/cmake-3.22/Modules/CheckFunctionExists.c
+Linking C executable cmTC_34982
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_34982.dir/link.txt --verbose=1
+/usr/bin/cc  -DCHECK_FUNCTION_EXISTS=cheev_ CMakeFiles/cmTC_34982.dir/CheckFunctionExists.c.o -o cmTC_34982  /usr/lib/x86_64-linux-gnu/libblas.so -lpthread -lm -ldl 
+/usr/bin/ld: CMakeFiles/cmTC_34982.dir/CheckFunctionExists.c.o: in function `main':
+CheckFunctionExists.c:(.text+0x14): undefined reference to `cheev_'
+collect2: error: ld returned 1 exit status
+make[1]: *** [CMakeFiles/cmTC_34982.dir/build.make:100：cmTC_34982] 错误 1
+make[1]: 离开目录“/home/rc_qh/下载/slam/gaussNewton/build/CMakeFiles/CMakeTmp”
+make: *** [Makefile:127：cmTC_34982/fast] 错误 2
+
+
+
+Determining if the function cheev_ exists failed with the following output:
+Change Dir: /home/rc_qh/下载/slam/gaussNewton/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make -f Makefile cmTC_c9759/fast && /usr/bin/make  -f CMakeFiles/cmTC_c9759.dir/build.make CMakeFiles/cmTC_c9759.dir/build
+make[1]: 进入目录“/home/rc_qh/下载/slam/gaussNewton/build/CMakeFiles/CMakeTmp”
+Building C object CMakeFiles/cmTC_c9759.dir/CheckFunctionExists.c.o
+/usr/bin/cc   -DCHECK_FUNCTION_EXISTS=cheev_ -o CMakeFiles/cmTC_c9759.dir/CheckFunctionExists.c.o -c /usr/share/cmake-3.22/Modules/CheckFunctionExists.c
+Linking C executable cmTC_c9759
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_c9759.dir/link.txt --verbose=1
+/usr/bin/cc  -DCHECK_FUNCTION_EXISTS=cheev_ CMakeFiles/cmTC_c9759.dir/CheckFunctionExists.c.o -o cmTC_c9759  /usr/lib/x86_64-linux-gnu/liblapack.so /usr/lib/x86_64-linux-gnu/libblas.so -fortranlibs 
+cc: error: unrecognized command line option ‘-fortranlibs’
+make[1]: *** [CMakeFiles/cmTC_c9759.dir/build.make:101：cmTC_c9759] 错误 1
+make[1]: 离开目录“/home/rc_qh/下载/slam/gaussNewton/build/CMakeFiles/CMakeTmp”
+make: *** [Makefile:127：cmTC_c9759/fast] 错误 2
+
+
+

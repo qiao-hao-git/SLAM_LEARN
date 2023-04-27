@@ -1,0 +1,60 @@
+Performing C SOURCE FILE Test CMAKE_HAVE_LIBC_PTHREAD failed with the following output:
+Change Dir: /home/rc_qh/下载/slam/stereo/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make -f Makefile cmTC_db8ed/fast && /usr/bin/make  -f CMakeFiles/cmTC_db8ed.dir/build.make CMakeFiles/cmTC_db8ed.dir/build
+make[1]: 进入目录“/home/rc_qh/下载/slam/stereo/build/CMakeFiles/CMakeTmp”
+Building C object CMakeFiles/cmTC_db8ed.dir/src.c.o
+/usr/bin/cc -DCMAKE_HAVE_LIBC_PTHREAD   -o CMakeFiles/cmTC_db8ed.dir/src.c.o -c /home/rc_qh/下载/slam/stereo/build/CMakeFiles/CMakeTmp/src.c
+Linking C executable cmTC_db8ed
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_db8ed.dir/link.txt --verbose=1
+/usr/bin/cc CMakeFiles/cmTC_db8ed.dir/src.c.o -o cmTC_db8ed 
+/usr/bin/ld: CMakeFiles/cmTC_db8ed.dir/src.c.o: in function `main':
+src.c:(.text+0x46): undefined reference to `pthread_create'
+/usr/bin/ld: src.c:(.text+0x52): undefined reference to `pthread_detach'
+/usr/bin/ld: src.c:(.text+0x5e): undefined reference to `pthread_cancel'
+/usr/bin/ld: src.c:(.text+0x6f): undefined reference to `pthread_join'
+collect2: error: ld returned 1 exit status
+make[1]: *** [CMakeFiles/cmTC_db8ed.dir/build.make:99：cmTC_db8ed] 错误 1
+make[1]: 离开目录“/home/rc_qh/下载/slam/stereo/build/CMakeFiles/CMakeTmp”
+make: *** [Makefile:127：cmTC_db8ed/fast] 错误 2
+
+
+Source file was:
+#include <pthread.h>
+
+static void* test_func(void* data)
+{
+  return data;
+}
+
+int main(void)
+{
+  pthread_t thread;
+  pthread_create(&thread, NULL, test_func, NULL);
+  pthread_detach(thread);
+  pthread_cancel(thread);
+  pthread_join(thread, NULL);
+  pthread_atfork(NULL, NULL, NULL);
+  pthread_exit(NULL);
+
+  return 0;
+}
+
+Determining if the function pthread_create exists in the pthreads failed with the following output:
+Change Dir: /home/rc_qh/下载/slam/stereo/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make -f Makefile cmTC_ecad9/fast && /usr/bin/make  -f CMakeFiles/cmTC_ecad9.dir/build.make CMakeFiles/cmTC_ecad9.dir/build
+make[1]: 进入目录“/home/rc_qh/下载/slam/stereo/build/CMakeFiles/CMakeTmp”
+Building C object CMakeFiles/cmTC_ecad9.dir/CheckFunctionExists.c.o
+/usr/bin/cc   -DCHECK_FUNCTION_EXISTS=pthread_create -o CMakeFiles/cmTC_ecad9.dir/CheckFunctionExists.c.o -c /usr/share/cmake-3.22/Modules/CheckFunctionExists.c
+Linking C executable cmTC_ecad9
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_ecad9.dir/link.txt --verbose=1
+/usr/bin/cc  -DCHECK_FUNCTION_EXISTS=pthread_create CMakeFiles/cmTC_ecad9.dir/CheckFunctionExists.c.o -o cmTC_ecad9  -lpthreads 
+/usr/bin/ld: 找不到 -lpthreads
+collect2: error: ld returned 1 exit status
+make[1]: *** [CMakeFiles/cmTC_ecad9.dir/build.make:99：cmTC_ecad9] 错误 1
+make[1]: 离开目录“/home/rc_qh/下载/slam/stereo/build/CMakeFiles/CMakeTmp”
+make: *** [Makefile:127：cmTC_ecad9/fast] 错误 2
+
+
+

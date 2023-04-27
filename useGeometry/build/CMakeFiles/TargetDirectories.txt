@@ -1,0 +1,3 @@
+/home/rc_qh/下载/slam/useGeometry/build/CMakeFiles/useGeometry.dir
+/home/rc_qh/下载/slam/useGeometry/build/CMakeFiles/edit_cache.dir
+/home/rc_qh/下载/slam/useGeometry/build/CMakeFiles/rebuild_cache.dir
