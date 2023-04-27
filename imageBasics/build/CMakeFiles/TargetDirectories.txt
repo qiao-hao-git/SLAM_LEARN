@@ -1,4 +1,0 @@
-/home/rc_qh/下载/slam/imageBasics/build/CMakeFiles/image.dir
-/home/rc_qh/下载/slam/imageBasics/build/CMakeFiles/imageDistort.dir
-/home/rc_qh/下载/slam/imageBasics/build/CMakeFiles/edit_cache.dir
-/home/rc_qh/下载/slam/imageBasics/build/CMakeFiles/rebuild_cache.dir
