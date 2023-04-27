@@ -1,3 +1,0 @@
-/home/rc_qh/下载/slam/rgbd/build/CMakeFiles/jointMap.dir
-/home/rc_qh/下载/slam/rgbd/build/CMakeFiles/edit_cache.dir
-/home/rc_qh/下载/slam/rgbd/build/CMakeFiles/rebuild_cache.dir
