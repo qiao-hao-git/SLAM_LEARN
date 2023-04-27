@@ -1,1 +1,0 @@
-/usr/bin/c++ CMakeFiles/useHello.dir/useHello.cpp.o -o useHello  -Wl,-rpath,/home/rc_qh/下载/slam/HelloSLAM/build libhello_shared.so 
